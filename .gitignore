@@ -184,3 +184,4 @@ cython_debug/
 .out
 .err
 test_grpo_minimal.sh
+checkpoints/

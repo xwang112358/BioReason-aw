@@ -1,0 +1,14 @@
+srun python train_dna_only.py \
+    --cache_dir ~/.cache/huggingface \
+    --wandb_project bioreason_exp \
+    --wandb_entity xwang160 \
+    --dna_model_name InstaDeepAI/nucleotide-transformer-v2-500m-multi-species \
+    --strategy ddp \
+    --max_epochs 3 \
+    --num_gpus 1 \
+    --batch_size 64 \
+    --max_length_dna 2048 \
+    --truncate_dna_per_side 1024 \
+    --train_just_classifier True \
+    --learning_rate 3e-4 \
+    --dataset_type variant_effect_coding
